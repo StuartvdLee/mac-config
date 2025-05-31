@@ -33,7 +33,7 @@ logi-options+
 microsoft-azure-storage-explorer
 microsoft-edge
 notion
-onedrive
+--cask onedrive
 qmk-toolbox
 raycast
 rider
