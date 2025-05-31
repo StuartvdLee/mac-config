@@ -6,6 +6,7 @@ print "Dock setup done"
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Install apps from app-list.txt
 xargs brew install < app-list.txt
 
 # git config
