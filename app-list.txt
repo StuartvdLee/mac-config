@@ -19,7 +19,6 @@ pre-commit
 pyenv
 python@3.13
 readline
-speedtest
 sqlite
 starship
 xz
