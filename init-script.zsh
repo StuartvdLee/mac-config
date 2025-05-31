@@ -14,7 +14,7 @@ git config --global user.email [FILL IN YOUR EMAIL]
 git config --global push.default "current"
 git config --global push.autoSetupRemote true
 git config --global pull.rebase false
-git config --global pull.prune true
+git config --global fetch.prune true
 git config --global core.editor "code"
 git config --global init.defaultBranch "main"
 print "Git config done"
