@@ -1,13 +1,19 @@
 # Remove all items from Dock and set the icon size to 48
 defaults write "com.apple.dock" "persistent-apps" -array; killall Dock
 defaults write com.apple.dock tilesize -int 48; killall Dock
-print "Dock setup done"
+echo "Dock setup done"
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "Successfully installed Homebrew"
 
 # Install apps from app-list.txt
 xargs brew install < app-list.txt
+echo "Successfully installed apps"
+
+# Add Raycast to login items
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Raycast.app", hidden:true}'
+echo "Added Raycast to login items"
 
 # git config
 git config --global user.name "Stuart van der Lee"
@@ -18,4 +24,4 @@ git config --global pull.rebase false
 git config --global fetch.prune true
 git config --global core.editor "code"
 git config --global init.defaultBranch "main"
-print "Git config done"
+echo "Git config done"
