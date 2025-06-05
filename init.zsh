@@ -29,7 +29,7 @@ echo "✅ Dock setup done"
 echo "✅ Successfully installed Homebrew"
 
 # Install apps from app-list.txt
-xargs brew install < app-list.txt
+xargs brew install < apps.txt
 echo "✅ Successfully installed apps"
 
 # Add Raycast to login items

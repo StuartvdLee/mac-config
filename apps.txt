@@ -24,6 +24,7 @@ starship
 xz
 1password
 adobe-acrobat-reader
+aldente
 azure-data-studio
 calibre
 chatgpt
