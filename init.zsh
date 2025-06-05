@@ -3,6 +3,12 @@ defaults write "com.apple.dock" "persistent-apps" -array; killall Dock
 defaults write com.apple.dock tilesize -int 48; killall Dock
 echo "Dock setup done"
 
+# Disable Spotlight and Finder search shortcuts
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:64:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:65:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+killall SystemUIServer
+echo "Disabled Spotlight and Finder search hotkeys"
+
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "Successfully installed Homebrew"
