@@ -33,12 +33,20 @@ xargs brew install < apps.txt
 echo "✅ Successfully installed apps"
 
 # Add Raycast to login items
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Raycast.app", hidden:true}'
-echo "✅ Added Raycast to login items"
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Raycast.app", hidden:true}' >/dev/null
+if [ $? -eq 0 ]; then
+    echo "✅ Added Raycast to login items"
+else
+    echo "❌ Failed to add Raycast to login items" >&2
+fi
 
 # Add AlDente to login items
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/AlDente.app", hidden:true}'
-echo "✅ Added AlDente to login items"
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/AlDente.app", hidden:true}' >/dev/null
+if [ $? -eq 0 ]; then
+    echo "✅ Added AlDente to login items"
+else
+    echo "❌ Failed to add AlDente to login items" >&2
+fi
 
 # Disable Spotlight search keyboard shortcut (Index 64, mask 1048576 = Command+Space)
 disable_hotkey 64 1048576
