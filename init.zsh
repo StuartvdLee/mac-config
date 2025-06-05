@@ -4,8 +4,8 @@ defaults write com.apple.dock tilesize -int 48; killall Dock
 echo "Dock setup done"
 
 # Disable Spotlight and Finder search shortcuts
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:64:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:65:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:64:enabled bool false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:65:enabled bool false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
 killall SystemUIServer
 echo "Disabled Spotlight and Finder search hotkeys"
 
