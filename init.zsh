@@ -36,6 +36,10 @@ echo "✅ Successfully installed apps"
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Raycast.app", hidden:true}'
 echo "✅ Added Raycast to login items"
 
+# Add AlDente to login items
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/AlDente.app", hidden:true}'
+echo "✅ Added AlDente to login items"
+
 # Disable Spotlight search keyboard shortcut (Index 64, mask 1048576 = Command+Space)
 disable_hotkey 64 1048576
 
