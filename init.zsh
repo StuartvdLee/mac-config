@@ -62,14 +62,3 @@ killall SystemUIServer
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
 echo "✅ Disabled Spotlight and Finder search hotkeys"
-
-# git config
-git config --global user.name "Stuart van der Lee"
-git config --global user.email [FILL IN YOUR EMAIL]
-git config --global push.default "current"
-git config --global push.autoSetupRemote true
-git config --global pull.rebase false
-git config --global fetch.prune true
-git config --global core.editor "code"
-git config --global init.defaultBranch "main"
-echo "✅ Git config done"
