@@ -12,6 +12,7 @@ libunistring
 libyaml
 m4
 mpdecimal
+oh-my-posh
 openssl@3
 pcre2
 pkgconf
@@ -20,12 +21,12 @@ pyenv
 python@3.13
 readline
 sqlite
-starship
 xz
 1password
 adobe-acrobat-reader
 aldente
 azure-data-studio
+font-caskaydia-cove-nerd-font
 calibre
 chatgpt
 discord
